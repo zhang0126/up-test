@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./bootstrap-3.4.1-dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./css/index.css">
+    <style>
+        /* 
+        .go_in_texts:简介文字部分
+        .go_in_imgs:简介下方图片
+        
+        */
+        .about_us{
+            margin-top: 50px;
+            text-align: center;
+            color: brown;
+        }
+        .line_grey{
+            width: 100%;
+            height: 2px;
+            background-color: grey;
+        }
+        .desc {
+            text-align: justify;
+            text-indent: 2em;
+            line-height: 32px;
+            color: #333;
+            font-size: 16px;
+        }
+        /* 中间scene部分样式 */
+        .hongcun_scene{
+            margin-top: 50px;
+        }
+        .scene_title h3{
+            font-size: 24px;
+            color: #000;
+            text-align: center;
+            font-weight: normal;
+        }
+        .hongcun_scene p{
+            text-indent: 2em;
+        }
+        .scene_context img{
+            width: 100%;
+            height: 100%;
+        }
+        .desc {
+            text-align: justify;
+            text-indent: 2em;
+            line-height: 32px;
+            color: #333;
+            font-size: 16px;
+        }
+        /* 简介下方图片 */
+        .go_imgs{
+            margin-top: 20px;
+            width: 100%;
+            height: 100px;
+        }
+
+        .scene_context p{
+            font-size: 24px;
+        }
+    </style>
+</head>
+
+<body>
+
+        <!-- 导航栏 -->
+        <!-- 导航栏 -->
+        <nav class="nav_hongcun navbar navbar-default">
+            <div  class="container-fluid">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div  class="navbar-header">
+                    <a style="margin-left: 30px;"  class="navbar-brand" href="#">宏村古镇风景名胜区</a>
+                </div>
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div style="margin-right: 30px;" class="nav_hongcun_list collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a style="line-height: 30px; " href="./index.html" >首页</a></li>
+                        <li class="dropdown">
+                            <a   href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                                aria-haspopup="true" aria-expanded="false">宏村背景 <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a class="hongcun_go"  href="#">关于宏村</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a class="hongcun_go"  href="#">关于宏村</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                                aria-haspopup="true" aria-expanded="false">宏村古建筑群 <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="./scene.html">宏村古景点</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="./scene.html">宏村古景点</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                                aria-haspopup="true" aria-expanded="false">宏村古祠堂 <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">世德堂</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="#">承志堂</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="#">发祥堂</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="#">敬爱堂</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="#">乐叙堂</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="#">慎思堂</a></li>
+                                <li role="separator" class="divider"></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                                aria-haspopup="true" aria-expanded="false">宏村古树 <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="./news.html">景点新闻</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="./news.html">景点新闻</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                                aria-haspopup="true" aria-expanded="false">宏村全景图 <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="./building.html">景点新闻</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="./building.html">景点新闻</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <!-- /.navbar-collapse -->
+            </div>
+            <!-- /.container-fluid -->
+        </nav>
+        <!-- 1、顶部背景图 -->
+    <div class="top_bac">
+        <a href="#">
+            <img style="width: 100%;height: 400px;" src="./img/about-us/about_2.png" alt="">
+        </a>
+    </div>
+        <!--  -->
+        <!-- 景色轮播图 -->
+    <div  class="container">
+        <!-- 2、页头 -->
+        <div class="page-header">
+            <h1 class="about_us">路亭 </h1>
+        </div>
+        <!-- 3、宏村简介 -->
+    </div>
+    <!-- 灰线 -->
+    <div class="line_grey"></div>
+    <!-- 4、重点部分：
+    这里想法是：
+    scene页面是作为最终页面
+        (1)通过 index -> scene
+        (2)通过 news -> scene
+        并且在 news 页面的列表索引 对应进入不同的 scene列表
+    -->
+    <!-- =================================================== -->
+    <div class="container">
+        <div class="hongcun_scene">
+            <div class="container">
+                <div class="scene_title">
+                    <h3>高阳桥</h3>
+                </div>
+                <br>
+                <div class="scene_context">
+                    <p class="scene_context1">高阳桥上有廊，所以又名高阳廊桥，廊内有七间，两侧各置坐凳，中间和南侧设佛座。桥廊设窗，可凭窗观赏许村四周的绿水青山，墙上和天花板上，彩绘游龙飞凤，形成了独特的建筑风格。高阳桥左边四根梁柱；右边八根梁柱，寓意为四平八稳。因为高阳桥不仅在崇山峻岭中构架了一条许村通向外界的通道，而且徽商远行，村中父老妻女在此送亲人出远门，薄酒一杯，依依惜别，苦涩的离愁化为滴滴热泪融入潺潺的溪水中。至于桥上佛座设置的观音菩萨，则是供远行人和送行的家人跪拜的，但愿浪迹天涯的亲人一路平安，早日功成名就。当然，依窗默对流水，眺望远山逶迤，更烘托出廊桥上离别的悲情愁绪。</p><br>
+                    <img src="./img/hongcun_scene/高阳桥.png" alt=""><br>
+                </div>
+                <br>
+                <nav aria-label="...">
+                    <ul class="pager">
+                        <!-- 按钮没绑定事件 -->
+                        <li style="margin: 0 20px;"><a href="#">上一篇</a></li>
+                        <li style="margin: 0 20px;"><a href="#">下一篇</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    
+            <!-- 宏村景色 -->
+            
+            <!-- 页头3 媒体播放器 -->
+            <div class="page-header">
+                <h1 class="about_us">相关视频 </h1>
+            </div>
+            <!-- 媒体播放器 -->
+            <div class="hongcun_meida">
+                <!-- 视频 src -->
+                <div style="width: 1170px;" class="news_video">
+                    <video style="width: 100%;" src="./video/Ontheload.mp4" height="500" controls preload="metadata"></video>
+                </div>
+            </div>
+    
+            <!-- 页头4 音频播放器 -->
+            <div class="page-header">
+                <h1 class="about_us">方言歌曲 </h1>
+            </div>
+            <div class="hongcun_scene">
+                <div class="container">
+                    <div class="row">
+                        <!-- 音频案例 -->
+                        <div class="col-md-6">
+                            <div class="video_introduce">
+                                <img class="hongcun_language" src="./img/hongcun_language/language.png" alt="">
+                                <span>明洪武八年至万历三十四年（1375—1606年），为宏村发展阶段。</span>
+                            </div>
+                            <audio controls style="width: 90%;"> 
+                                <source src="http://music.163.com/song/media/outer/url?id=447925558.mp3"> 
+                            </audio>
+                        </div>
+                        <!-- 音频案例 -->
+                        <div class="col-md-6">
+                            <div class="video_introduce">
+                                <img class="hongcun_language" src="./img/hongcun_language/language.png" alt="">
+                                <span>明洪武八年至万历三十四年（1375—1606年），为宏村发展阶段。</span>
+                            </div>
+                            <audio controls style="width: 90%;"> 
+                                <source src="http://music.163.com/song/media/outer/url?id=447925558.mp3"> 
+                            </audio>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            
+            <!-- 音频分页按钮 ---没绑定（没设置多余的图片） -->
+            <nav style="text-align: center;" aria-label="Page navigation">
+                <ul class="pagination pagination-lg">
+                    <li>
+                        <a href="#" aria-label="Previous">
+                        <span aria-hidden="true">&laquo;</span>
+                        </a>
+                    </li>
+                    <li><a href="#">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#">4</a></li>
+                    <li><a href="#">5</a></li>
+                    <li>
+                        <a href="#" aria-label="Next">
+                        <span aria-hidden="true">&raquo;</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+    </div>
+    
+        <!-- =================================================================== -->
+        
+    </div>
+        <!-- 巨幕结尾 -->
+        <div style="text-align: center; margin-top: 50px;" class="jumbotron">
+            <h1>你好 宏村</h1>
+            <p>欢迎各位前来美丽的宏村旅游！</p>
+            <p><a class="btn btn-primary btn-lg" href="#" role="button">返回顶部</a></p>
+        </div>
+
+               <!-- &lt;!&ndash; 侧边栏 &ndash;&gt;
+                <div class="cebianlan">
+                    <div class="cebianlan_title hongcun_go"></div>
+                    <div class="cebianlan_title hongcun_scene"></div>
+                    <div class="cebianlan_title hongcun_VR"></div>
+                    <div class="cebianlan_title hongcun_news"></div>
+                    <div class="cebianlan_title hongcun_building"></div>
+                </div>-->
+</body>
+
+<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+
+<script src="./bootstrap-3.4.1-dist/js/bootstrap.min.js"></script>
+
+
+<script>
+    // 不用管
+    $('.go_hongcun img').addClass('shadow_img')
+
+    // 一、侧边导航栏
+    console.log($('.dropdown-toggle').text())
+    var cbl = $('.dropdown-toggle').text()
+    var cbl_list = cbl.split(' ')
+    cbl_list.pop()
+    var list = document.getElementsByClassName('cebianlan_title');
+    console.log(cbl_list)
+    for( i=0; i<list.length; i++)
+        {
+            list[i].innerHTML=cbl_list[i];
+        }
+    
+    // VR全景图本地服务器链接 http://localhost:8080/360%e5%86%85%e5%b5%8c/
+    $('.VR_text').click(function(){
+        $(location).attr('href','http://localhost:8080/360%e5%86%85%e5%b5%8c/')
+    })
+
+    // 一、走进宏村
+    // 图片、顶部导航栏、侧边导航栏都用的同一个 class 名
+    $('.hongcun_go').click(function(){
+        $(location).attr('href','./go_in.html')
+    })
+    
+    $('.hongcun_scene').click(function(){
+        $(location).attr('href','./scene.html')
+    })
+    $('.hongcun_VR').click(function(){
+        $(location).attr('href','./')
+    })
+    $('.hongcun_news').click(function(){
+        $(location).attr('href','./news.html')
+    })
+    $('.hongcun_building').click(function(){
+        $(location).attr('href','./building.html')
+    })
+</script>
+
+</html>
