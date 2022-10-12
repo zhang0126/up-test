@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./bootstrap-3.4.1-dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./css/index.css">
+    <style>
+        /* 
+        .go_in_texts:简介文字部分
+        .go_in_imgs:简介下方图片
+        
+        */
+        .about_us{
+            margin-top: 50px;
+            text-align: center;
+            color: brown;
+        }
+        .line_grey{
+            width: 100%;
+            height: 2px;
+            background-color: grey;
+        }
+        .desc {
+            text-align: justify;
+            text-indent: 2em;
+            line-height: 32px;
+            color: #333;
+            font-size: 16px;
+        }
+        /* 中间scene部分样式 */
+        .hongcun_scene{
+            margin-top: 50px;
+        }
+        .scene_title h3{
+            font-size: 24px;
+            color: #000;
+            text-align: center;
+            font-weight: normal;
+        }
+        .hongcun_scene p{
+            text-indent: 2em;
+        }
+        .scene_context img{
+            width: 100%;
+            height: 100%;
+        }
+        .desc {
+            text-align: justify;
+            text-indent: 2em;
+            line-height: 32px;
+            color: #333;
+            font-size: 16px;
+        }
+        /* 简介下方图片 */
+        .go_imgs{
+            margin-top: 20px;
+            width: 100%;
+            height: 100px;
+        }
+
+        .scene_context p{
+            font-size: 24px;
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- 导航栏 -->
+<!-- 导航栏 -->
+<nav class="nav_hongcun navbar navbar-default">
+    <div  class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div  class="navbar-header">
+            <a style="margin-left: 30px;"  class="navbar-brand" href="#">棠樾风景名胜区</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div style="margin-right: 30px;" class="nav_hongcun_list collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a style="line-height: 30px; " href="./index.html" >首页</a></li>
+                <li class="dropdown">
+                    <a   href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                         aria-haspopup="true" aria-expanded="false">总介绍 <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a class="hongcun_go"  href="#">关于宏村</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a class="hongcun_go"  href="#">关于宏村</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                       aria-haspopup="true" aria-expanded="false" >祠堂牌坊空间布局 <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="scene_kongjianzuhe.html">宏村古景点</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="scene_kongjianzuhe.html">宏村古景点</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                       aria-haspopup="true" aria-expanded="false">棠樾祠堂群 <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">景点VR</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="#">景点VR</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                       aria-haspopup="true" aria-expanded="false">棠樾牌坊群 <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="./news.html">景点新闻</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="./news.html">景点新闻</a></li>
+                    </ul>
+                </li>
+                <!--                        <li class="dropdown">-->
+                <!--                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"-->
+                <!--                                aria-haspopup="true" aria-expanded="false">祠堂古木 <span class="caret"></span></a>-->
+                <!--                            <ul class="dropdown-menu">-->
+                <!--                                <li><a href="./building.html">景点新闻</a></li>-->
+                <!--                                <li role="separator" class="divider"></li>-->
+                <!--                                <li><a href="./building.html">景点新闻</a></li>-->
+                <!--                            </ul>-->
+                <!--                        </li>-->
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container-fluid -->
+</nav>
+        <!-- 1、顶部背景图 -->
+    <div class="top_bac">
+        <a href="#">
+            <img style="width: 100%;height: 400px;" src="./img/about-us/about_2.png" alt="">
+        </a>
+    </div>
+        <!--  -->
+        <!-- 景色轮播图 -->
+    <div  class="container">
+        <!-- 2、页头 -->
+        <div class="page-header">
+            <h1 class="about_us">棠樾牌坊群 </h1>
+        </div>
+        <!-- 3、宏村简介 -->
+    </div>
+    <!-- 灰线 -->
+    <div class="line_grey"></div>
+    <!-- 4、重点部分：
+    这里想法是：
+    scene页面是作为最终页面
+        (1)通过 index -> scene
+        (2)通过 news -> scene
+        并且在 news 页面的列表索引 对应进入不同的 scene列表
+    -->
+    <!-- =================================================== -->
+    <div class="container">
+        <div class="hongcun_scene">
+            <div class="container">
+                <div class="scene_title">
+                    <h3>鲍灿孝行坊</h3>
+                </div>
+                <br>
+                <div class="scene_context">
+                    <p class="scene_context1">鲍灿坊，为卷草纹头脊式，4柱3间，坊阔9.54米，进深3.54米，高8.86米，鲍灿孝行坊牌坊挑檐下的"龙凤板"上镶着"圣旨"二字，横梁正反各有一对浮雕雄狮，额题"旌表孝行赠兵部右侍郎鲍灿"。《歙县志》记载:鲍灿读书通达，不求仕进。其母两脚病疽，延医多年无效。
+                        鲍灿事母，持续吮吸老母双脚血脓，终至痊愈。他的孝行感动了乡里，经请旨建造此坊。
+                    </p><br>
+                    <img src="img/static/tangyue_7.JPG" alt=""><br>
+<!--                    <p style="margin-top: 35px;">十七世纪中叶，宏村村人在南湖北畔建私塾六所，古称“倚湖六院”，供族人子弟受业解惑，以育人才。曾任清政府内阁中书，民国时驻英、日公使，代总理大臣的汪大燮、当代著名的科学家。澳星发射研制专家之一的李小鹃等学者，都是在这里启蒙的。</p><br>-->
+                </div>
+                <br>
+                <div class="line_grey"></div>
+                <div class="scene_title">
+                    <h3>慈孝里坊</h3>
+                </div>
+                <br>
+                <div class="scene_context">
+                    <p class="scene_context1">慈孝里坊，卷草纹头脊式，4柱3间，通面阔8.57米，进深2.53米，
+                        高9.6米，上面镌刻的是"御制"、"慈寺里"，为旌表宋末处士鲍余岩、鲍寿逊父子而建，是皇帝新批"御制"的。史书记载，元代歙县守将李达率部叛乱，烧杀掳掠。棠樾鲍氏父子被乱军所获，并要二人杀一，让他们决定谁死谁生，孰料父子争死，以求他生，感天动地，连乱军也不忍下刀。后来朝廷为了旌表他们，赐建此坊。牌坊上还铭刻了明永乐皇帝的《慈孝诗》日:"父遭盗缚迫凶危，生死存亡在一时。……鲍家父母全仁孝，留取声名照古今。"乾隆皇帝下江南时听到这个事后，欣然写下了"慈孝天下无双里，锦绣江南第一乡"的对联，并拨银将"慈孝里"牌坊重新修缮，
+                        又刻御题对联于其上。一座牌坊被几朝皇帝加封，这在中国历史上也不多见。
+                    </p><br>
+                    <img src="img/static/tangyue_6.JPG" alt=""><br>
+                    <!--                    <p style="margin-top: 35px;">十七世纪中叶，宏村村人在南湖北畔建私塾六所，古称“倚湖六院”，供族人子弟受业解惑，以育人才。曾任清政府内阁中书，民国时驻英、日公使，代总理大臣的汪大燮、当代著名的科学家。澳星发射研制专家之一的李小鹃等学者，都是在这里启蒙的。</p><br>-->
+                </div>
+                <br>
+                <div class="line_grey"></div>
+                <div class="scene_title">
+                    <h3>鲍文龄妻江氏节孝坊</h3>
+                </div>
+                <br>
+                <div class="scene_context">
+                    <p class="scene_context1">矢贞全孝坊，江氏节孝坊额刻"矢贞全孝"、"立节完孤"。牌坊结构与乐善好施坊相同。县志记载，江氏为棠樾人，26岁守寡后，"立节完孤"，把儿子集成培养成歙县的名医。寡妇守节，培养后嗣，
+                        被宗法社会认为是最大的孝行，因为宗族是依靠血统来维系的。所以在江氏80岁高龄时，族人为她请旌，建起了这座宛如其化身的牌坊。
+                    </p><br>
+                    <img src="img/static/tangyue_5.JPG" alt=""><br>
+                    <!--                    <p style="margin-top: 35px;">十七世纪中叶，宏村村人在南湖北畔建私塾六所，古称“倚湖六院”，供族人子弟受业解惑，以育人才。曾任清政府内阁中书，民国时驻英、日公使，代总理大臣的汪大燮、当代著名的科学家。澳星发射研制专家之一的李小鹃等学者，都是在这里启蒙的。</p><br>-->
+                </div>
+                <br>
+                <div class="line_grey"></div>
+                <div class="scene_title">
+                    <h3>乐善好施坊</h3>
+                </div>
+                <br>
+                <div class="scene_context">
+                    <p class="scene_context1">乐善好施坊，均为冲天柱式，4柱3间，通面阔11.82米，进深2.85米，
+                        高11.70米。大小柱额都不加纹饰，唯挑檐下的拱板镌刻花纹图案，月梁上的环与雀替也相应雕刻了精致的纹样。粗大的梁柱平琢璋磨，不事雕饰。此坊为旌表诺授通奉大夫议叙盐运使司鲍淑芳同子鲍均而建。鲍淑芳为大盐商，嘉庆八年集众商输饷，奉旨议叙盐运使职衔，洪泽湖决堤时，慈善资助。并在家乡也有众多义举。
+                        并嘱咐儿子鲍均，克守祖训，造福乡里。徽州府督抚被鲍淑芳、鲍均父子的诸多义举所感动，后请命于朝廷，以乐善好施得旨施表建坊。
+                    </p><br>
+                    <img src="img/static/tangyue_2.JPG" alt=""><br>
+                    <!--                    <p style="margin-top: 35px;">十七世纪中叶，宏村村人在南湖北畔建私塾六所，古称“倚湖六院”，供族人子弟受业解惑，以育人才。曾任清政府内阁中书，民国时驻英、日公使，代总理大臣的汪大燮、当代著名的科学家。澳星发射研制专家之一的李小鹃等学者，都是在这里启蒙的。</p><br>-->
+                </div>
+                <br>
+                <div class="line_grey"></div>
+                <div class="scene_title">
+                    <h3>鲍文渊继妻吴氏节孝坊</h3>
+                </div>
+                <br>
+                <div class="scene_context">
+                    <p class="scene_context1">节劲三冬坊，因旌表鲍文渊继妻吴氏"节劲三冬"、"脉存一线"而建。
+                        县志记载:吴氏，嘉定人，22岁嫁入棠樾，时小姑生病，她昼夜护理。29岁时丈夫去世，她立节守志，对前室的孤子元标视如亲生，尽心抚养，
+                        直至其成家立业。鲍元标也不负母恩，终于成为清季著名的书法家。年老之后，吴氏又倾其家产，为亡夫修了九世以下的祖墓，
+                        安葬好丈夫和族属中没有钱安葬的人。"厚葬"也是对祖宗的孝顺，当然也值得颂扬。吴氏还尽
+                    </p><br>
+                    <img src="img/static/tangyue_3.JPG" alt=""><br>
+                    <!--                    <p style="margin-top: 35px;">十七世纪中叶，宏村村人在南湖北畔建私塾六所，古称“倚湖六院”，供族人子弟受业解惑，以育人才。曾任清政府内阁中书，民国时驻英、日公使，代总理大臣的汪大燮、当代著名的科学家。澳星发射研制专家之一的李小鹃等学者，都是在这里启蒙的。</p><br>-->
+                </div>
+                <br>
+                <div class="line_grey"></div>
+                <div class="scene_title">
+                    <h3>鲍逢昌孝子坊</h3>
+                </div>
+                <br>
+                <div class="scene_context">
+                    <p class="scene_context1">天鉴精诚坊，旌表孝子鲍逢昌，背镌"人钦真孝"，牌坊结盟构与乐善好施坊相同。鲍逢昌孝子坊为旌表孝子鲍逢昌而建。据记载，逢昌的父亲在明末离乱时外出多年，杳无音信。清顺治三年(1646年)，才14岁的逢昌便沿路乞讨，千里寻父，最后终于在甘肃的雁门古寺找到了生病的父亲。他为父亲的背疽吮脓疗疮，并扶持父亲回到家中。
+                        一进家门又见母新病危在床，需要浙江富春山的真乳香医治。母亲服用后果然痊愈，族人
+                    </p><br>
+                    <img src="img/static/tangyue_4.JPG" alt=""><br>
+                    <!--                    <p style="margin-top: 35px;">十七世纪中叶，宏村村人在南湖北畔建私塾六所，古称“倚湖六院”，供族人子弟受业解惑，以育人才。曾任清政府内阁中书，民国时驻英、日公使，代总理大臣的汪大燮、当代著名的科学家。澳星发射研制专家之一的李小鹃等学者，都是在这里启蒙的。</p><br>-->
+                </div>
+                <br>
+                <div class="line_grey"></div>
+                <div class="scene_title">
+                    <h3>鲍象贤尚书坊</h3>
+                </div>
+                <br>
+                <div class="scene_context">
+                    <p class="scene_context1">冲天柱式4柱3间，坊的背面镑有"官联台斗"4个大字。
+                        鲍象贤尚书坊旌表鲍象贤镇守云南、山东有功。歙县志记载:鲍象贤嘉靖八年(1529年)进士，初授御史，后任兵部右侍郎。他曾经远赴云南边防，使边境得以安定，当地百姓还为他建了生祠以示感恩。由于秉性亢直，卑视权贵，鲍象贤多次遭到奸臣的中伤，
+                        政治生涯几起几落。但他一直抱持"官不择位"的思想，廉智自持，不计个人毁誉得失，一如既往地效忠社稷。
+                    </p><br>
+                    <img src="img/static/tangyue_1.JPG" alt=""><br>
+                    <!--                    <p style="margin-top: 35px;">十七世纪中叶，宏村村人在南湖北畔建私塾六所，古称“倚湖六院”，供族人子弟受业解惑，以育人才。曾任清政府内阁中书，民国时驻英、日公使，代总理大臣的汪大燮、当代著名的科学家。澳星发射研制专家之一的李小鹃等学者，都是在这里启蒙的。</p><br>-->
+                </div>
+                <br>
+
+<!--                <nav aria-label="...">-->
+<!--                    <ul class="pager">-->
+<!--                        &lt;!&ndash; 按钮没绑定事件 &ndash;&gt;-->
+<!--                        <li style="margin: 0 20px;"><a href="#">上一篇</a></li>-->
+<!--                        <li style="margin: 0 20px;"><a href="#">下一篇</a></li>-->
+<!--                    </ul>-->
+<!--                </nav>-->
+            </div>
+        </div>
+    
+<!--            &lt;!&ndash; 宏村景色 &ndash;&gt;-->
+<!--            &lt;!&ndash; 页头3 媒体播放器 &ndash;&gt;-->
+<!--            <div class="page-header">-->
+<!--                <h1 class="about_us">相关视频 </h1>-->
+<!--            </div>-->
+<!--            &lt;!&ndash; 媒体播放器 &ndash;&gt;-->
+<!--            <div class="hongcun_meida">-->
+<!--                &lt;!&ndash; 视频 src &ndash;&gt;-->
+<!--                <div style="width: 1170px;" class="news_video">-->
+<!--                    <video style="width: 100%;" src="./video/Ontheload.mp4" height="500" controls preload="metadata"></video>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--    -->
+<!--            &lt;!&ndash; 页头4 音频播放器 &ndash;&gt;-->
+<!--            <div class="page-header">-->
+<!--                <h1 class="about_us">方言歌曲 </h1>-->
+<!--            </div>-->
+<!--            <div class="hongcun_scene">-->
+<!--                <div class="container">-->
+<!--                    <div class="row">-->
+<!--                        &lt;!&ndash; 音频案例 &ndash;&gt;-->
+<!--                        <div class="col-md-6">-->
+<!--                            <div class="video_introduce">-->
+<!--                                <img class="hongcun_language" src="./img/hongcun_language/language.png" alt="">-->
+<!--                                <span>明洪武八年至万历三十四年（1375—1606年），为宏村发展阶段。</span>-->
+<!--                            </div>-->
+<!--                            <audio controls style="width: 90%;"> -->
+<!--                                <source src="http://music.163.com/song/media/outer/url?id=447925558.mp3"> -->
+<!--                            </audio>-->
+<!--                        </div>-->
+<!--                        &lt;!&ndash; 音频案例 &ndash;&gt;-->
+<!--                        <div class="col-md-6">-->
+<!--                            <div class="video_introduce">-->
+<!--                                <img class="hongcun_language" src="./img/hongcun_language/language.png" alt="">-->
+<!--                                <span>明洪武八年至万历三十四年（1375—1606年），为宏村发展阶段。</span>-->
+<!--                            </div>-->
+<!--                            <audio controls style="width: 90%;"> -->
+<!--                                <source src="http://music.163.com/song/media/outer/url?id=447925558.mp3"> -->
+<!--                            </audio>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                -->
+<!--            </div>-->
+<!--            -->
+<!--            &lt;!&ndash; 音频分页按钮 -&#45;&#45;没绑定（没设置多余的图片） &ndash;&gt;-->
+<!--            <nav style="text-align: center;" aria-label="Page navigation">-->
+<!--                <ul class="pagination pagination-lg">-->
+<!--                    <li>-->
+<!--                        <a href="#" aria-label="Previous">-->
+<!--                        <span aria-hidden="true">&laquo;</span>-->
+<!--                        </a>-->
+<!--                    </li>-->
+<!--                    <li><a href="#">1</a></li>-->
+<!--                    <li><a href="#">2</a></li>-->
+<!--                    <li><a href="#">3</a></li>-->
+<!--                    <li><a href="#">4</a></li>-->
+<!--                    <li><a href="#">5</a></li>-->
+<!--                    <li>-->
+<!--                        <a href="#" aria-label="Next">-->
+<!--                        <span aria-hidden="true">&raquo;</span>-->
+<!--                        </a>-->
+<!--                    </li>-->
+<!--                </ul>-->
+<!--            </nav>-->
+<!--    </div>-->
+    
+        <!-- =================================================================== -->
+        
+    </div>
+        <!-- 巨幕结尾 -->
+        <div style="text-align: center; margin-top: 50px;" class="jumbotron">
+            <h1>你好 棠樾</h1>
+            <p>欢迎各位前来美丽的棠樾旅游！</p>
+            <p><a class="btn btn-primary btn-lg" href="#" role="button">返回顶部</a></p>
+        </div>
+
+<!--                &lt;!&ndash; 侧边栏 &ndash;&gt;-->
+<!--                <div class="cebianlan">-->
+<!--                    <div class="cebianlan_title hongcun_go"></div>-->
+<!--                    <div class="cebianlan_title hongcun_scene"></div>-->
+<!--                    <div class="cebianlan_title hongcun_VR"></div>-->
+<!--                    <div class="cebianlan_title hongcun_news"></div>-->
+<!--                    <div class="cebianlan_title hongcun_building"></div>-->
+<!--                </div>-->
+</body>
+
+<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+
+<script src="./bootstrap-3.4.1-dist/js/bootstrap.min.js"></script>
+
+
+<script>
+    // 不用管
+    $('.go_hongcun img').addClass('shadow_img')
+
+    // 一、侧边导航栏
+    console.log($('.dropdown-toggle').text())
+    var cbl = $('.dropdown-toggle').text()
+    var cbl_list = cbl.split(' ')
+    cbl_list.pop()
+    var list = document.getElementsByClassName('cebianlan_title');
+    console.log(cbl_list)
+    for( i=0; i<list.length; i++)
+        {
+            list[i].innerHTML=cbl_list[i];
+        }
+    
+    // VR全景图本地服务器链接 http://localhost:8080/360%e5%86%85%e5%b5%8c/
+    $('.VR_text').click(function(){
+        $(location).attr('href','http://localhost:8080/360%e5%86%85%e5%b5%8c/')
+    })
+
+    // 一、走进宏村
+    // 图片、顶部导航栏、侧边导航栏都用的同一个 class 名
+    $('.hongcun_go').click(function(){
+        $(location).attr('href','./go_in.html')
+    })
+    
+    $('.hongcun_scene').click(function(){
+        $(location).attr('href','./scene.html')
+    })
+    $('.hongcun_VR').click(function(){
+        $(location).attr('href','http://localhost:8080/360%e5%86%85%e5%b5%8c/')
+    })
+    $('.hongcun_news').click(function(){
+        $(location).attr('href','./news.html')
+    })
+    $('.hongcun_building').click(function(){
+        $(location).attr('href','./building.html')
+    })
+</script>
+
+</html>
