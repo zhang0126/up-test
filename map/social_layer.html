@@ -1,0 +1,332 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<html>
+<head>
+    <title>古镇</title>
+</head>
+<body>
+<div>
+    <fieldset>
+        地图展示
+    </fieldset>
+    <fieldset>
+        <div style="min-height: 400px; width: 100%;" id="map">
+        </div>
+        <script type="text/javascript">
+            var map; //Map实例
+            //后台传过来118.10608,29.919967
+            var currentLat = 118.10608;
+            var currentLon = 29.919967;
+            var my = {title: "我的位置"};
+            var url111 = decodeURI(location.search);
+            var flag = 1;
+            if (url111 != null) {
+                flag = url111.split("=")[1];
+            }
+            var markerArr = [];
+            if (flag == 1) {
+                 markerArr = [
+                     {id: "13", title: "呈坎", point: "118.291017,29.927827"},
+                     {id: "9", title: "棠樾", point: "118.37439,29.873878"},
+                     {id: "10", title: "许村", point: "118.328964,29.99998"},
+                     {id: "12", title: "雄村", point: "118.44738,29.826475"},
+                     {id: "4", title: "西递景区", point: "118.00355,29.910232"},
+                     {id: "3", title: "南屏景区", point: "117.912463,29.908853"},
+                ];
+            }
+            else if(flag==2)
+            {
+                markerArr = [
+                    {id: "13", title: "呈坎", point: "118.291017,29.927827"},
+                    {id: "9", title: "棠樾", point: "118.37439,29.873878"},
+                    {id: "10", title: "许村", point: "118.328964,29.99998"},
+                    {id: "12", title: "雄村", point: "118.44738,29.826475"},
+                    {id: "6", title: "宏村", point: "117.996734,30.008708"},
+                    {id: "4", title: "西递古村景区", point: "118.00355,29.910232"},
+                ];
+            }
+            else if(flag ==3)
+            {
+                markerArr = [
+                    {id: "12", title: "雄村", point: "118.44738,29.826475"},
+                    {id: "8", title: "西溪南古村落", point: "118.292631,29.846794"},
+                    {id: "7", title: "唐模风景区-北门", point: "118.343081,29.874448"},
+                    {id: "10", title: "许村", point: "118.328964,29.99998"},
+                    {id: "6", title: "宏村", point: "117.996734,30.008708"},
+                    {id: "4", title: "西递古村景区", point: "118.00355,29.910232"},
+                    {id: "9", title: "棠樾牌坊", point: "118.37439,29.873878"},
+                ];
+            }
+            else if(flag ==4)
+            {
+                markerArr = [
+                    {id: "8", title: "西溪南古村落", point: "118.292631,29.846794"},
+                    {id: "13", title: "呈坎", point: "118.291017,29.927827"},
+                    {id: "6", title: "宏村", point: "117.996734,30.008708"},
+                    {id: "4", title: "西递古村景区", point: "118.00355,29.910232"},
+                    {id: "2", title: "关麓景区", point: "117.885168,29.906908"},
+                    {id: "10", title: "许村", point: "118.328964,29.99998"},
+                    {id: "3", title: "南屏景区", point: "117.912463,29.908853"},
+                    {id: "11", title: "蓝田村", point: "118.47189,30.004722"},
+                    {id: "7", title: "唐模风景区-北门", point: "118.343081,29.874448"},
+                    {id: "6", title: "宏村", point: "117.996734,30.008708"},
+                ];
+            }
+            else if(flag ==5)
+            {
+                markerArr = [
+                    {id: "11", title: "蓝田村", point: "118.47189,30.004722"},
+                    {id: "8", title: "西溪南古村落", point: "118.292631,29.846794"},
+                    {id: "7", title: "唐模风景区-北门", point: "118.343081,29.874448"},
+                    {id: "6", title: "宏村", point: "117.996734,30.008708"},
+                    {id: "4", title: "西递古村景区", point: "118.00355,29.910232"},
+                    {id: "12", title: "雄村", point: "118.44738,29.826475"},
+                    {id: "13", title: "呈坎", point: "118.291017,29.927827"},
+                ];
+            }
+
+
+            function map_init() {
+                map = new BMap.Map("map");
+//第1步：设置地图中心点，当前城市
+                var point = new BMap.Point(currentLat, currentLon);
+//第2步：初始化地图,设置中心点坐标和地图级别。
+                map.centerAndZoom(point, 13);
+//第3步：启用滚轮放大缩小
+                map.enableScrollWheelZoom(true);
+//第4步：向地图中添加缩放控件
+                var ctrlNav = new window.BMap.NavigationControl({
+                    anchor: BMAP_ANCHOR_TOP_LEFT,
+                    type: BMAP_NAVIGATION_CONTROL_LARGE
+                });
+                map.addControl(ctrlNav);
+//第5步：向地图中添加缩略图控件
+                var ctrlOve = new window.BMap.OverviewMapControl({
+                    anchor: BMAP_ANCHOR_BOTTOM_RIGHT,
+                    isOpen: 1
+                });
+                map.addControl(ctrlOve);
+
+//第6步：向地图中添加比例尺控件
+                var ctrlSca = new window.BMap.ScaleControl({
+                    anchor: BMAP_ANCHOR_BOTTOM_LEFT
+                });
+                map.addControl(ctrlSca);
+
+
+//第7步：绘制点
+                for (var i = 0; i < markerArr.length; i++) {
+                    var p0 = markerArr[i].point.split(",")[0];
+                    var p1 = markerArr[i].point.split(",")[1];
+                    var maker = addMarker(new window.BMap.Point(p0, p1), i);
+                    addInfoWindow(maker, markerArr[i]);
+                }
+//绘制点
+                var points = new Array();
+                for (var i = 0; i < markerArr.length; i++) {
+                    var p0 = markerArr[i].point.split(",")[0];
+                    var p1 = markerArr[i].point.split(",")[1];
+                    var thePoint1 = new BMap.Point(p0, p1);
+                    points.push(thePoint1);
+                }
+                drawPolyline(map, points);
+
+// 添加信息窗口
+                function addInfoWindow(marker, poi) {
+// marker.setAnimation(BMAP_ANIMATION_BOUNCE); //跳动的动画
+                    var label = new window.BMap.Label(poi.title, {offset: new window.BMap.Size(2, 1)});
+                    marker.setLabel(label);
+                    var clo = "";
+                    if ("我的位置" == poi.title) {
+                        clo = "#FF5782";
+                    } else {
+                        clo = "#E6FED";
+                    }
+                    label.setStyle({
+                        color: "#99999",
+                        fontSize: "16px",
+                        marginLeft: "20px",
+                        borderRadius: "30px",
+                        backgroundColor: "0.05",
+                        border: "0",
+                        fontWeight: "bold"
+                    });
+//maps.addOverlay(lab1);
+                    var fileName="hongcun";
+
+                    // var info = new window.BMap.InfoWindow("<p id='"+poi.title+"' style=’font-size:12px;lineheight:1.8em;color:#999999;’>" +poi.title+ "</p>"); // 创建信息窗口对象
+                   //  switch(poi.id) {
+                   //      case "2":
+                   //          fileName="guanlu";
+                   //          break;
+                   //      case 3:
+                   //          fileName="nanping";
+                   //          break;
+                   //      case 4:
+                   //          fileName="xidi";
+                   //          break;
+                   //      case 5:
+                   //          fileName="xidi";
+                   //          break;
+                   //      case 6:
+                   //          fileName="hongcun";
+                   //          break;
+                   //      case 7:
+                   //          fileName="tangmo";
+                   //          break;
+                   //      case 8:
+                   //          fileName="xixinan";
+                   //      case 9:
+                   //          fileName="tangyue";
+                   //      case 10:
+                   //          fileName="xucun";
+                   //      case 11:
+                   //          fileName="lantian";
+                   //      case 12:
+                   //          fileName="xiongcun";
+                   //      case "13":
+                   //          fileName="chengkan";
+                   //      default:
+                   //          fileName="hongcun"
+                   //  }
+                   // fileName=fileName+flag;
+
+
+
+
+
+                    if(flag==3)
+                    {
+                        if(poi.id==8)
+                        {
+                            fileName="xixinan3";
+
+                        }
+                        else if(poi.id==10)
+                        {
+                            fileName="xucun3";
+                        }
+                        else if(poi.id==4)
+                        {
+                            fileName="xidi3";
+                        }
+                        else if(poi.id==7)
+                        {
+                            fileName="tangmo3";
+                        }
+                    }
+                    else if(flag ==1)
+                    {
+                        if(poi.id==13)
+                        {
+                            fileName="chengkan1";
+                        }
+                        else if(poi.id==9)
+                        {
+                            fileName="tangyue1";
+                        }
+                        else if(poi.id==4)
+                        {
+                            fileName="xidi1";
+                        }
+                    }
+                    else if(flag ==2)
+                    {
+                        if(poi.id==13){
+                            fileName="chengkan2";
+                        }
+                        if(poi.id==9){
+                            fileName="tangyue2";
+                        }
+
+                    }
+                    else if(flag ==4)
+                    {
+                        if(poi.id==11)
+                        {
+                            fileName="lantian4";
+                        }
+                        else if(poi.id==7)
+                        {
+                            fileName="tangmo4";
+                        }
+                        else if(poi.id==8)
+                        {
+                            fileName="xixinan4";
+                        }
+                        else if(poi.id==6)
+                        {
+                            fileName="hongcun4";
+                        }
+
+                    }
+                    else if(flag==5)
+                    {
+                        if(poi.id==13){
+                            fileName="chengkan5";
+                        }
+                        else if(poi.id==6)
+                        {
+                            fileName="hongcun5";
+                        }
+                    }
+
+                   var info = new window.BMap.InfoWindow("<div style='height: 100px;width: 100px;'>" +
+                        "        <a href='../index/"+fileName+"/index.html?poiId='>" +
+                        "<img width='100%' height='100%' src=\"./imgs/icon/书院门.png\" alt=\"\"  style='padding-left: 50px;'></a>" +
+                        "</div>");
+                    // 创建信息窗口对象
+                    var openInfoWinFun = function () {
+                        this.openInfoWindow(info);
+                    };
+                    marker.addEventListener("click", openInfoWinFun);
+
+                }
+            }
+
+            // 添加标注
+            function addMarker(point, index) {
+                index = 11;
+                var myIcon = new BMap.Icon("http://api.map.baidu.com/img/markers.png",
+                    new BMap.Size(23, 25), {
+                        offset: new BMap.Size(10, 25),
+                        imageOffset: new BMap.Size(0, 0 - index * 25)
+
+                    });
+                var marker = new BMap.Marker(point, {icon: myIcon});
+                map.addOverlay(marker);
+                return marker;
+            }
+
+            //异步调用百度js
+            function map_load() {
+                var load = document.createElement("script");
+                load.src = "http://api.map.baidu.com/api?v=1.4&callback=map_init";
+                document.body.appendChild(load);
+            }
+
+            /**
+             * 画线
+             * @param bMap
+             * @param points
+             */
+            function drawPolyline(bMap, points) {
+                if (points == null || points.length <= 1) {
+                    return;
+                }
+                // bMap.addOverlay(new BMap.Polyline(points, {
+                //     strokeColor : "blue",
+                //     strokeWeight : 3,
+                //     strokeOpacity : 0.6
+                // })); // 画线
+
+            }
+
+            window.onload = map_load;
+        </script>
+    </fieldset>
+</div>
+</body>
+</html>
+
