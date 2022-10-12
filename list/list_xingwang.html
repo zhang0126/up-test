@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Tangerine">
+    <!-- =======================    样式    =========================== -->
+    <link rel="stylesheet" href="./list.css">
+    <!-- =======================    样式    =========================== -->
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="wrap">
+            <div class="top-title">
+                <div class="jumbotron">
+                    <h1 style="text-align: center;">徽州村落的选址与营造</h1>
+                </div>
+            </div>
+
+            <div class="content">
+                <div class="row">
+                    <div class="col-xs-6 col-md-4 content-box">
+                        <h2 class="animate__animated animate__bounce">宗 法 社 会</h2>
+                        <a id="social_layer" href="#" class="thumbnail ">
+                            <div class="text ">
+                                <p class="word">宗祠在我国古代传统文化中占有非常重要的地位,
+                                    中国传统思想中的“光宗耀祖”思想便很大程度上来源于宗祠文化。
+                                    祠堂是儒家祭祀祖先或先贤的场所。
+                                    祠堂有多种用途，除了用于祭祀祖先，也是作为各房子孙办理婚、丧、寿、喜等事件以及商议族内重要事务的场所。
+                                </p>
+                            </div>
+                            <img src="./imgs/宗法社会.png" alt="..."  class="animate__animated animate__bounce img-circle circle">
+                        </a>
+                    </div>
+
+                    <div class="col-xs-6 col-md-4 content-box">
+                        <h2 class="animate__animated animate__bounce">人 文 荟 萃</h2>
+                        <a href="#" class="thumbnail ">
+                            <div class="text ">
+                                <p class="word">徽州古村落是历史上徽州人生产生活的中心之一，是徽州文化的主要载体，创造了灿烂的地域文化：
+                                    新安理学、徽派经学、徽州教育、徽州戏剧、新安画派、徽州版画、徽州刻书等形成一个完整、系统的地域文化──徽州文化。
+                                    由此形成了徽州地区独特的文化景观，使得徽州古村落独树一帜。
+                                </p>
+                            </div>
+                            <img src="./imgs/人文荟萃.png" alt="..." class="animate__animated animate__bounce img-circle circle">
+                        </a>
+                    </div>
+
+                    <div class="col-xs-6 col-md-4 content-box">
+                        <h2 class="animate__animated animate__bounce">园 林 情 调</h2>
+                      <a href="#" class="thumbnail">
+                        <div class="text">
+                            <p class="word" >园林情调是徽州古村落的重要特征之一，徽州村落富有园林情调,村落孕育于自然山水之中的和谐美是居民最为清晰的徽州村落景观。徽州古村落远近皆山景观效果远观近看各不相同。近看者山峰引入仰视激起人的崇高之感；
+                                远观者山峰高耸于远方或秀色可餐或似有若无构成了与崇高若即若离的空间景观美。
+                            </p>
+                        </div>
+                        <img src="./imgs/园林情调.png" alt="..." class="animate__animated animate__bounce img-circle circle">
+                      </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </div>
+</body>
+</html>
+
+<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+
+<script>
+
+    $('.circle').hover(function(){
+        $(this).prev().css({"z-index":"10","opacity":"0.8","transition-duration":"2s"})
+    })
+
+
+
+    // 跳跳跳
+    $('#social_layer').click(function(){
+        $(location).attr('href','../map/social_layer.html')
+    })
+</script>
