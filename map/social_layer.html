@@ -7,6 +7,11 @@
     <link href="../static/bootstrap-3.4.1-dist/css/bootstrap.min.css" rel="stylesheet"/>
     <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
     <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <style>
+        .dropdown:hover .dropdown-menu {
+            display: block;
+        }
+    </style>
 </head>
 <body>
 <nav class="navbar navbar-default" role="navigation">
@@ -19,7 +24,7 @@
 <!--                修改page参数即可实现跳转地图-->
                 <li><a href="social_layer.html?page=1">首页</a></li>
                 <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                    <a href="social_layer.html?page=2" class="dropdown-toggle" data-toggle="dropdown">
                         村落选址
                         <b class="caret"></b>
                     </a>
@@ -438,4 +443,9 @@
 </div>
 </body>
 </html>
-
+<script>
+  // 禁用
+  $(document).ready(function(){
+    $(document).off('click.bs.dropdown.data-api');
+  });
+</script>

@@ -28,13 +28,14 @@
     color: #FBCFAD;
     margin-bottom: 20px;
 }
-.thumbnail{
+.thumbnail11{
     border: none;
     position: relative;
     display: flex;
     justify-content: center;
- background: #8C9880 !important;
-}
+
+
+ }
 /* .content-box img{
     opacity: 1;
 } */
